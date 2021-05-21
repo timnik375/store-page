@@ -1,0 +1,34 @@
+.filter {
+  width: 270px;
+  height: 250px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  p {
+	color: #000000;
+	text-transform: capitalize;
+  }
+
+  .manufacturer, .axle {
+	padding-left: 16px;
+
+	label {
+	  margin-left: 10px;
+	}
+  }
+
+  .search {
+	display: flex;
+	justify-content: center;
+
+	button {
+	  width: 238px;
+	  height: 35px;
+	  background-color: #56CCF2;
+	  color: #FFFFFF;
+	  text-transform: uppercase;
+	}
+  }
+}

@@ -1,0 +1,17 @@
+- var path = htmlWebpackPlugin.options.locals
+
+nav
+    .wrapper
+        .nav_inner
+            ul.navlink_container
+                each elem in path.nav
+                    li.navlink_item
+                        a(href= elem.href)= elem.text
+        .breadcrumbs
+            ul.breadcrumbs_container
+                each elem, index in path.breadcrumbs
+                    li.breadcrumb_item
+                        a(href= elem.href)= elem.text
+                    if index !== path.breadcrumbs.length - 1
+                        li.breadcrumb_icon
+                            span >

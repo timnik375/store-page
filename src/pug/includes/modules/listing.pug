@@ -1,0 +1,37 @@
+- var path = htmlWebpackPlugin.options.locals
+
+
+.listing
+        .card_list
+            each elem, index in path.stock
+                .card_container
+                    .card_img
+                        img(src='https://raw.githubusercontent.com/aleksey-drozdov/webm-test-data/main/src/images/' + elem.image)
+                    .card_description
+                        .card_description_heading
+                            h3= elem.title
+                            .card_price
+                                p= elem.price + ' ' + elem.price_currency
+                        .card_description_text
+                            span= elem.make + ' '
+                            span= elem.model + ', '
+                            span= elem.type + ', '
+                            span= elem.year + ', '
+                            span= elem.mileage + ' '
+                            span= elem.mileage_measure + ', '
+                            span= elem.power + ' '
+                            span= elem.power_measure
+                        .card_tag
+                            .card_tag_year
+                                p= elem.year
+                            .card_tag_mileage
+                                p= elem.mileage + ' ' + elem.mileage_measure
+                            .card_tag_axle
+                                p= elem.axle_configuration
+        .page_description
+            each elem, index in path.page_text
+                if index !== path.page_text.length - 1
+                    p= elem.content
+                    br
+                else
+                    p= elem.content

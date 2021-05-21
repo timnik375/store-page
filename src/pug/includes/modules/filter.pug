@@ -1,0 +1,25 @@
+.filter
+    .manufacturer
+        p manufacturer
+        .manufacturer_type
+            input(type="checkbox" data-type="make" name = "DAF" id='DAF' value = 'DAF')
+            label(for="DAF") DAF
+        .manufacturer_type
+            input(type="checkbox" data-type="make" name = "VOLVO" id='VOLVO' value = 'VOLVO')
+            label(for="VOLVO") VOLVO
+        .manufacturer_type
+            input(type="checkbox" data-type="make" name = "FORD" id='FORD' value = 'FORD')
+            label(for="FORD") FORD
+    .axle
+        p axle configuration
+        .axle_type
+            input(type="checkbox" data-type="axle_configuration" name="6x2" id='6x2' value='6x2' class='axle_configuration')
+            label(for="6x2") 6x2
+        .axle_type
+            input(type="checkbox" data-type="axle_configuration" name="4x4" id='4x4'  value='4x4' class='axle_configuration')
+            label(for="4x4") 4x4
+        .axle_type
+            input(type="checkbox" data-type="axle_configuration" name="4x2" id='4x2' value='4x2' class='axle_configuration')
+            label(for="4x2") 4x2
+    .search
+        button search

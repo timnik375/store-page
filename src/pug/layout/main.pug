@@ -1,0 +1,26 @@
+- var path = htmlWebpackPlugin.options.locals
+
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet")
+    title= path.page_meta.title
+    meta(name="description", content=path.page_meta.meta_description)
+    meta(name='keywords' content=path.page_meta.meta_keywords)
+    block head
+
+  body
+    include ../includes/modules/header
+
+    include ../includes/modules/nav
+
+    main
+      .wrapper
+        include ../includes/modules/filter
+        include ../includes/modules/listing
+
+    include ../includes/modules/footer
